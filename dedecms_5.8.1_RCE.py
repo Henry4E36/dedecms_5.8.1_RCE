@@ -66,13 +66,13 @@ if __name__ == "__main__":
             "[-]  参数错误！\neg1:>>>python3 dedecms_5.8.1_RCE.py -u http://127.0.0.1\neg2:>>>python3 dedecms_5.8.1_RCE.py -f ip.txt")
     elif args.url:
         results = Information(args).target_url()
-        if results[0] is True:
+        if results[1] is True:
             print(f"\033[31m[{chr(8730)}] 目标系统: {results[-1]} 存在代码执行漏洞！\033[0m")
             print(f"[{chr(8730)}] 响应为:{results[1]}")
-        elif results[0] is False:
+        elif results[1] is False:
             print(f"[\033[31mx\033[0m]  目标系统: {results[-1]} 不存在代码执行漏洞！")
             print("[" + "-" * 100 + "]")
-        elif results[0] == "Error":
+        elif results[1] == "Error":
             print("[\033[31mX\033[0m]  连接错误！")
             print("[" + "-"*100 + "]")
     elif args.file:
