@@ -1,8 +1,6 @@
 # dedecms_5.8.1_RCE
 dedecms_5.8.1代码执行漏洞
 
-# Options
-Interlib图书馆集群管理系统任意文件读取
 
 optional arguments:
 
